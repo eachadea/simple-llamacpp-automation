@@ -1,0 +1,12 @@
+{
+    "tfs_z": 0.0,
+    "temperature": 0.0,
+    "top_k": 0,
+    "top_p": 0.0,
+    "mirostat_mode": 0,
+    "mirostat_eta": 0.0,
+    "mirostat_tau": 0.0,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0
+  }

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# get the absolute path of the directory containing this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# install requirements
+pip install -r "${SCRIPT_DIR}/requirements.txt"
+
+# newlines for readability
+echo -e "\n\n\n"
+
+# run autotest.py
+python "${SCRIPT_DIR}/main.py"
+
+# wait for user input
+read -p "Press any key to continue..."

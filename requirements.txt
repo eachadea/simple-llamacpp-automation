@@ -1,0 +1,4 @@
+llama-cpp-python
+psutil
+pyyaml
+python-dotenv
