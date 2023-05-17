@@ -14,6 +14,9 @@ from utils import misc
 # Makes a mess
 VERBOSE = False
 
+# Helps with swapping
+USE_MLOCK = True
+
 # Each model has its own developer-recommended prompt template
 MODEL_CONFIG_REQUIRED_ARGS = [
     "pre_prompt",
@@ -119,7 +122,7 @@ def main_loop(models_dir: str, prompts: List[str], presets: List[Dict[str, Any]]
 
             misc.print_newlines(3)
 
-            model = create_llama(bin_path, n_threads=n_threads, verbose=VERBOSE, seed=seed, n_ctx=n_ctx)
+            model = create_llama(bin_path, n_threads=n_threads, verbose=VERBOSE, seed=seed, n_ctx=n_ctx, use_mlock=USE_MLOCK)
 
             for preset in presets:
                 for prompt in prompts:
