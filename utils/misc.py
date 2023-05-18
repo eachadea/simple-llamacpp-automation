@@ -103,11 +103,12 @@ def write_results_to_json(results: Any) -> str:
     with tempfile.NamedTemporaryFile(mode='w', delete=False) as temp_file:
         json.dump(output, temp_file, indent=4)
         temp_file.flush()
-        return temp_file.name
 
     output_path = os.path.join(output_dir_path, filename)
     with open(output_path, 'w') as f:
         json.dump(output, f, indent=4)
+
+    return output_path
 
 
 def print_newlines(count: int = 3) -> None:
